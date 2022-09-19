@@ -3,11 +3,11 @@
 }
 
 .page-header__container {
-  @include flexbox();
+  // @include flexbox();
 }
 
 .navigation {
-  @include flexbox();
+  // @include flexbox();
 }
 
 .navigation__logo {
@@ -29,7 +29,7 @@
 }
 
 .menu {
-  display: flex;
+  // display: flex;
 
   & .menu__item:not(:last-child) {
     margin-right: 50px;
@@ -67,7 +67,7 @@
 }
 
 .contacts {
-  display: flex;
+  // display: flex;
   margin-left: auto;
 
   & .contacts__item:not(:last-child) {
@@ -76,7 +76,7 @@
 }
 
 .contacts__link {
-  @include flexbox();
+  // @include flexbox();
   @include font(16px, 500, $letsp: 0.02em);
   // font-weight: 500;
   // line-height: 1.14;

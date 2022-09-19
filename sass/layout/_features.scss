@@ -1,12 +1,19 @@
 .features__list {
-  display: flex;
+  // display: flex;
 }
 
 .features__item {
-  width: 270px;
+  // width: 270px;
+  @media screen and (max-width: 1199px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
 
-  &:not(:last-child) {
-    margin-right: 30px;
+  @media screen and (min-width: 1200px) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 
@@ -18,9 +25,11 @@
 }
 
 .features__title {
+  @media screen and (max-width: 479px) {
+    text-align: center;
+  }
+
   @include font(16px, 700);
-  // font-size: 14px;
-  // line-height: 1.14;
   text-transform: uppercase;
 
   margin-top: 30px;
