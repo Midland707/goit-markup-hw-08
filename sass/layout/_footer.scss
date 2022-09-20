@@ -8,9 +8,11 @@
 }
 
 .page-footer__container {
-  // display: flex;
-  // align-items: baseline;
-  // gap: 70px;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+    gap: 70px;
+  }
 }
 
 .page-footer__logo {
@@ -47,7 +49,7 @@
 
 /* Footer social-link */
 .page-footer__social {
-  @media screen and (max-width: 479px) {
+  @media screen and (max-width: 767px) {
     margin-top: 60px;
     margin-bottom: 60px;
   }
