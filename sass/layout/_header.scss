@@ -2,26 +2,41 @@
   border-bottom: 1px solid #ececec;
 }
 
-.page-header__container {
-  // @include flexbox();
-}
-
+.page-header__container,
 .navigation {
-  // @include flexbox();
+  @media screen and (min-width: 768px) {
+    @include flexbox();
+  }
 }
-
-.navigation__logo {
-  margin-right: 93px;
+.navigation {
+  @media screen and (max-width: 1199px) {
+    width: 496px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 520px;
+  }
 }
 
 .logo {
+  display: block;
   font-family: 'Raleway', sans-serif;
   font-style: normal;
-  @include font(31px, 700, 26px);
-  // font-weight: 700;
-  // font-size: 26px;
-  // line-height: 1.19;
+
   color: var(--active-color);
+  @media screen and (max-width: 767px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  @media screen and (min-width: 768px) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  @media screen and (max-width: 1199px) {
+    @include font(28px, 700, 24px);
+  }
+  @media screen and (min-width: 1200px) {
+    @include font(31px, 700, 26px);
+  }
 }
 
 .logo_text_color {
@@ -29,11 +44,14 @@
 }
 
 .menu {
-  // display: flex;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 
   & .menu__item:not(:last-child) {
     margin-right: 50px;
   }
+  margin-left: auto;
 }
 
 .menu__link {
@@ -41,9 +59,6 @@
   padding-top: 33px;
   padding-bottom: 33px;
   @include font(16px, 500, $letsp: 0.02em);
-  // font-weight: 500;
-  // line-height: 1.14;
-  // letter-spacing: 0.02em;
   color: inherit;
 
   transition: color var(--transition-durat-and-func);
@@ -67,24 +82,39 @@
 }
 
 .contacts {
-  // display: flex;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
   margin-left: auto;
 
   & .contacts__item:not(:last-child) {
-    margin-right: 50px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-bottom: 10px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-right: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu,
+  .contacts {
+    display: none;
   }
 }
 
 .contacts__link {
-  // @include flexbox();
+  @include flexbox();
   @include font(16px, 500, $letsp: 0.02em);
   // font-weight: 500;
   // line-height: 1.14;
   // letter-spacing: 0.02em;
   color: var(--second-color);
-
-  padding-top: 32px;
-  padding-bottom: 32px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 
   transition: color var(--transition-durat-and-func);
 
