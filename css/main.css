@@ -966,11 +966,26 @@ button {
 }
 
 .filter__list {
-  margin-bottom: 50px;
+  display: flex;
+  gap: 8px;
 }
-
-.filter__item:not(:last-child) {
-  margin-right: 8px;
+@media screen and (max-width: 767px) {
+  .filter__list {
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .filter__list {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter__list {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 
 .filter__btn {
@@ -997,10 +1012,30 @@ button {
   padding: 6px 25px;
 }
 
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
 .projects__group {
   background: var(--third-color);
   border: 1px solid #eeeeee;
-  width: calc((100% - 60px) / 3);
+}
+@media screen and (max-width: 767px) {
+  .projects__group {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .projects__group {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects__group {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .projects__link {
