@@ -737,16 +737,13 @@ button {
   margin-bottom: 50px;
 }
 
-@media screen and (min-width: 768px) {
-  .team__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
+.team__list {
+  display: flex;
+  gap: 30px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .team__list {
-    display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -756,13 +753,18 @@ button {
   border-radius: 0px 0px 4px 4px;
 }
 @media screen and (max-width: 767px) {
-  .team__card:not(:last-child) {
-    margin-bottom: 30px;
+  .team__card {
+    width: 100%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .team__card {
-    width: 47%;
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__card {
+    width: calc((100% - 60px) / 3);
   }
 }
 
