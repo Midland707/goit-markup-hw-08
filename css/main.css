@@ -101,12 +101,33 @@ button {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .form-subscribe {
+    margin-top: 60px;
+  }
+}
 @media screen and (max-width: 1199px) {
   .form-subscribe {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .form-subscribe {
+    display: flex;
+    align-items: flex-end;
+    margin-left: auto;
+  }
+}
+
+.form-subscribe__label {
+  width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .form-subscribe__label {
+    margin-right: 12px;
   }
 }
 
@@ -123,13 +144,26 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  width: 358px;
   height: 50px;
   background-color: var(--dark-background-color);
-  margin-right: 12px;
   color: var(--third-color);
   padding-left: 16px;
   transition: border-color var(--transition-durat-and-func);
+}
+@media screen and (max-width: 1199px) {
+  .form-subscribe__input-email {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .form-subscribe__input-email {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .form-subscribe__input-email {
+    width: 358px;
+  }
 }
 .form-subscribe__input-email::placeholder {
   color: rgba(255, 255, 255, 0.6);
@@ -142,6 +176,7 @@ button {
 }
 
 .form-subscribe__btn {
+  display: block;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
@@ -853,11 +888,29 @@ button {
   .page-footer__container {
     display: flex;
     align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .page-footer__box {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page-footer__box {
+    display: flex;
+    align-items: baseline;
     gap: 70px;
   }
 }
 
 .page-footer__logo {
+  padding: 0;
+}
+
+.page-footer__logo-text {
   color: var(--third-color);
 }
 
