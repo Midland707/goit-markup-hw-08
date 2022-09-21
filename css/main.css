@@ -725,6 +725,11 @@ button {
     margin-bottom: 30px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team__card {
+    width: 47%;
+  }
+}
 
 .team__card-img {
   border-radius: 0px;
@@ -789,22 +794,35 @@ button {
   margin-bottom: 50px;
 }
 
-@media screen and (min-width: 1200px) {
-  .clients__list {
-    display: flex;
-    gap: 30px;
-  }
+.clients__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .clients__link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 170px;
   height: 92px;
   border-radius: 4px;
   border: 1px solid var(--icon-color);
   transition: border-color var(--transition-durat-and-func);
+}
+@media screen and (max-width: 767px) {
+  .clients__link {
+    width: 210px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .clients__link {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__link {
+    width: 170px;
+  }
 }
 .clients__link:hover, .clients__link:focus {
   border-color: var(--active-color);
