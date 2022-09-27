@@ -140,30 +140,67 @@
           <h2 class="services__title">Чим ми займаємося</h2>
           <ul class="services__list list">
             <li class="services__item">
-              <img
-                class="services__img"
-                src="./images/coding.jpg"
-                alt="Десктопні додатки"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/services/desktop-app.webp    1x,
+                    ./images/services/desktop-app@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/services/desktop-app.jpg    1x,
+                    ./images/services/desktop-app@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="services__img"
+                  src="./images/services/desktop-app.jpg"
+                  alt="Десктопні додатки"
+                />
+              </picture>
+
               <h3 class="services__item-overlay">Десктопні додатки</h3>
             </li>
             <li class="services__item">
-              <img
-                class="services__img"
-                src="./images/testing.jpg"
-                alt="Мобільні додатки"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/services/mobile-app.webp    1x,
+                    ./images/services/mobile-app@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/services/mobile-app.jpg    1x,
+                    ./images/services/mobile-app@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="services__img"
+                  src="./images/services/mobile-app.jpg"
+                  alt="Мобільні додатки"
+                />
+              </picture>
               <h3 class="services__item-overlay">Мобільні додатки</h3>
             </li>
             <li class="services__item">
-              <img
-                class="services__img"
-                src="./images/design.jpg"
-                alt="Дизайнерські рішення"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="./images/services/desing.webp 1x, ./images/services/desing@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/services/desing.jpg 1x, ./images/services/desing@2x.jpg 2x"
+                />
+                <img
+                  class="services__img"
+                  src="./images/services/desing.jpg"
+                  alt="Дизайнерські рішення"
+                />
+              </picture>
               <h3 class="services__item-overlay">Дизайнерські рішення</h3>
             </li>
           </ul>
@@ -176,6 +213,21 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list list">
             <li class="team__card">
+              <!-- <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/services/desktop-app.jpg    1x,
+                    ./images/services/desktop-app@2x.jpg 2x
+                  "
+                />
+                
+                <img
+                  class="services__img"
+                  src="./images/services/desktop-app.jpg"
+                  alt="Десктопні додатки"
+                />
+              </picture> -->
+
               <img
                 class="team__card-img"
                 src="./images/team-card1.jpg"
