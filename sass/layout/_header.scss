@@ -4,14 +4,20 @@
 
 .page-header__container,
 .navigation {
+  @media screen and (max-width: 767px) {
+    @include flexbox($justcont: space-between);
+  }
+
   @media screen and (min-width: 768px) {
     @include flexbox();
   }
 }
+
 .navigation {
   @media screen and (max-width: 1199px) {
     width: 496px;
   }
+
   @media screen and (min-width: 1200px) {
     width: 520px;
   }
@@ -23,17 +29,21 @@
   font-style: normal;
 
   color: var(--active-color);
+
   @media screen and (max-width: 767px) {
     padding-top: 16px;
     padding-bottom: 16px;
   }
+
   @media screen and (min-width: 768px) {
     padding-top: 26px;
     padding-bottom: 26px;
   }
+
   @media screen and (max-width: 1199px) {
     @include font(28px, 700, 24px);
   }
+
   @media screen and (min-width: 1200px) {
     @include font(31px, 700, 26px);
   }
@@ -51,6 +61,7 @@
   & .menu__item:not(:last-child) {
     margin-right: 50px;
   }
+
   margin-left: auto;
 }
 
@@ -81,16 +92,34 @@
   }
 }
 
+.open-mobile-menu-btn {
+  line-height: 0;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.open-mobile-menu-btn__icon {
+  width: 40px;
+  height: 40px;
+}
+
 .contacts {
   @media screen and (min-width: 1200px) {
     display: flex;
   }
+
   margin-left: auto;
 
   & .contacts__item:not(:last-child) {
     @media screen and (min-width: 768px) and (max-width: 1199px) {
       margin-bottom: 10px;
     }
+
     @media screen and (min-width: 1200px) {
       margin-right: 50px;
     }
@@ -98,6 +127,7 @@
 }
 
 @media screen and (max-width: 767px) {
+
   .menu,
   .contacts {
     display: none;
@@ -111,6 +141,7 @@
   // line-height: 1.14;
   // letter-spacing: 0.02em;
   color: var(--second-color);
+
   @media screen and (min-width: 1200px) {
     padding-top: 32px;
     padding-bottom: 32px;
@@ -129,3 +160,31 @@
   margin-right: 10px;
   fill: currentColor;
 }
+
+.mobile-menu {}
+
+.mobile-menu__container {
+  @include flexbox();
+}
+
+.mobile-menu__close-btn {
+  line-height: 0;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-menu__close-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.mobile-menu__nav {}
+
+.mobile-menu__contacts {}
+
+.mobile-menu__social {}
