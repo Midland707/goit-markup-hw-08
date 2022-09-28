@@ -30,7 +30,6 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
   color: var(--primary-color);
-  background-color: var(--third-color);
 }
 
 h1,
@@ -88,19 +87,16 @@ button {
     width: 480px;
     margin-left: auto;
     margin-right: auto;
-    background-color: aqua;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
-    background-color: red;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
-    background-color: blue;
   }
 }
 
@@ -229,11 +225,24 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  min-height: 581px;
   background-color: var(--third-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+@media screen and (max-width: 450px) {
+  .modal {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 451px) and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
 }
 
 .modal__close-btn {
@@ -345,9 +354,20 @@ button {
   display: flex;
   align-items: center;
   align-self: center;
-  line-height: 1.71;
   color: var(--second-color);
   margin-bottom: 30px;
+}
+@media screen and (max-width: 1199px) {
+  .modal-form__check-field {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-form__check-field {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .modal-form__checkbox {
@@ -409,6 +429,7 @@ button {
   opacity: 0;
   visibility: hidden;
   pointer-events: 0;
+  transition: opacity var(--transition-durat-and-func), visibility var(--transition-durat-and-func);
 }
 
 .mobile-menu.is-open {
@@ -492,7 +513,7 @@ button {
 
 .mobile-menu__social {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   color: var(--active-color);
 }
 
@@ -502,7 +523,10 @@ button {
   font-size: 18px;
   letter-spacing: 0.02em;
   color: var(--active-color);
-  border: 1px solid rgba(33, 33, 33, 0.2);
+}
+.mobile-menu__social-item:not(:last-child) .mobile-menu__social-link {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding-right: 10px;
 }
 
 .page-header {
@@ -730,16 +754,17 @@ button {
 .hero__title {
   margin: inherit;
   margin-bottom: 30px;
+  line-height: 1.6153846154;
+  font-weight: 900;
+  font-size: 26px;
+  letter-spacing: 0.06em;
+  width: 100%;
   text-align: center;
   text-transform: uppercase;
   color: var(--third-color);
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero__title {
-    line-height: 1.6153846154;
-    font-weight: 900;
-    font-size: 26px;
-    letter-spacing: 0.06em;
     width: 360px;
   }
 }
