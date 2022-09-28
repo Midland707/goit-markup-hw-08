@@ -62,6 +62,11 @@
 .mobile-menu__nav-link {
   @include font(47px, 500, 40px, 0.02em);
   color: var(--primary-color);
+  transition: color var(--transition-durat-and-func);
+
+  &:focus {
+    color: var(--active-color);
+  }
 }
 
 .mobile-menu__nav-link_current {
@@ -81,6 +86,19 @@
   font-size: 34px;
   line-height: 1.74;
   color: var(--active-color);
+  transition: color var(--transition-durat-and-func);
+
+  &:focus {
+    color: var(--primary-color);
+  }
+}
+
+.mobile-menu__contacts-email {
+  transition: color var(--transition-durat-and-func);
+
+  &:focus {
+    color: var(--active-color);
+  }
 }
 
 .mobile-menu__contacts-item:not(:last-child) {
@@ -98,5 +116,10 @@
   .mobile-menu__social-item:not(:last-child) & {
     border-right: 1px solid rgba(33, 33, 33, 0.2);
     padding-right: 10px;
+  }
+  transition: color var(--transition-durat-and-func);
+
+  &:focus {
+    color: var(--primary-color);
   }
 }
