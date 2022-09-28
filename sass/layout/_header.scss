@@ -127,7 +127,6 @@
 }
 
 @media screen and (max-width: 767px) {
-
   .menu,
   .contacts {
     display: none;
@@ -137,9 +136,6 @@
 .contacts__link {
   @include flexbox();
   @include font(16px, 500, $letsp: 0.02em);
-  // font-weight: 500;
-  // line-height: 1.14;
-  // letter-spacing: 0.02em;
   color: var(--second-color);
 
   @media screen and (min-width: 1200px) {
@@ -160,31 +156,3 @@
   margin-right: 10px;
   fill: currentColor;
 }
-
-.mobile-menu {}
-
-.mobile-menu__container {
-  @include flexbox();
-}
-
-.mobile-menu__close-btn {
-  line-height: 0;
-  border: none;
-  background-color: transparent;
-  padding: 0;
-
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
-}
-
-.mobile-menu__close-icon {
-  width: 40px;
-  height: 40px;
-}
-
-.mobile-menu__nav {}
-
-.mobile-menu__contacts {}
-
-.mobile-menu__social {}
