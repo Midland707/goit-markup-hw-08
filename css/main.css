@@ -422,6 +422,7 @@ button {
 
 .mobile-menu {
   position: fixed;
+  display: flex;
   top: 0;
   left: 0;
   z-index: 101;
@@ -477,7 +478,6 @@ button {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  margin-bottom: 300px;
 }
 
 .mobile-menu__nav-link {
@@ -498,6 +498,7 @@ button {
 
 .mobile-menu__contacts {
   margin-bottom: 64px;
+  margin-top: auto;
 }
 
 .mobile-menu__contacts-link {
