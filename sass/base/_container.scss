@@ -4,13 +4,14 @@
   padding-right: 15px;
 
   @media screen and (min-width: 320px) {
-    overflow-x: hidden;
+    overflow-x: auto;
   }
 
   @media screen and (max-width: 767px) {
     width: 480px;
     margin-left: auto;
     margin-right: auto;
+    background-color: aqua;
   }
 
   @media screen and (min-width: 768px) {
