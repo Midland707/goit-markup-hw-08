@@ -78,7 +78,6 @@ button {
   }
 }
 .container {
-  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -92,7 +91,6 @@ button {
     width: 480px;
     margin-left: auto;
     margin-right: auto;
-    background-color: aqua;
   }
 }
 @media screen and (min-width: 768px) {
@@ -738,10 +736,10 @@ button {
 }
 
 .hero {
-  margin-left: auto;
-  margin-right: auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-mobile.jpg");
   background-color: var(--light-background-color);
+  margin-left: auto;
+  margin-right: auto;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -946,6 +944,7 @@ button {
 
 .team {
   background-color: var(--fourth-color);
+  min-width: 480px;
 }
 
 .team__title {
@@ -1098,6 +1097,7 @@ button {
   background-color: var(--dark-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
+  min-width: 480px;
 }
 @media screen and (max-width: 1199px) {
   .page-footer {

@@ -2,6 +2,8 @@
   background-color: var(--dark-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
+  min-width: 480px;
+
   @media screen and (max-width: 1199px) {
     text-align: center;
   }
@@ -20,6 +22,7 @@
     align-items: baseline;
     justify-content: space-around;
   }
+
   @media screen and (min-width: 1200px) {
     display: flex;
     align-items: baseline;
