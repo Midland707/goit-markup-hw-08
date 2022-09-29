@@ -14,10 +14,11 @@
   }
   gap: 8px;
 }
-
-// .filter__item:not(:last-child) {
-//   margin-right: 8px;
-// }
+@media screen and (max-width: 767px) {
+  .filter__item:nth-child(3) {
+    margin-right: 100px;
+  }
+}
 
 .filter__btn {
   padding: 6px 22px;
