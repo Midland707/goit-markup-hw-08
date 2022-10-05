@@ -9,7 +9,11 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 320px) {
+    width: 300px;
+  }
+  width: 95%;
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
     width: 450px;
   }
 
