@@ -80,24 +80,27 @@ button {
 .container {
   padding-left: 15px;
   padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 320px) {
+  .container {
+    width: 320px;
+  }
 }
 @media screen and (min-width: 320px) {
   .container {
     overflow-x: hidden;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .container {
     width: 480px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -554,7 +557,7 @@ button {
 
 .page-header {
   border-bottom: 1px solid #ececec;
-  min-width: 480px;
+  min-width: 320px;
 }
 
 @media screen and (max-width: 767px) {
@@ -746,7 +749,7 @@ button {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  min-width: 480px;
+  min-width: 320px;
 }
 @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
   .hero {
@@ -788,17 +791,21 @@ button {
 .hero__title {
   margin: inherit;
   margin-bottom: 30px;
-  line-height: 1.6153846154;
+  line-height: 1.5;
   font-weight: 900;
-  font-size: 26px;
+  font-size: 20px;
   letter-spacing: 0.06em;
-  width: 100%;
+  width: 290px;
   text-align: center;
   text-transform: uppercase;
   color: var(--third-color);
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 480px) and (max-width: 1199px) {
   .hero__title {
+    line-height: 1.6153846154;
+    font-weight: 900;
+    font-size: 26px;
+    letter-spacing: 0.06em;
     width: 360px;
   }
 }
@@ -947,14 +954,23 @@ button {
 
 .team {
   background-color: var(--fourth-color);
-  min-width: 480px;
+  min-width: 320px;
 }
 
 .team__title {
-  font-size: 36px;
-  line-height: 1.16;
+  line-height: 1.17;
   text-align: center;
   margin-bottom: 50px;
+}
+@media screen and (max-width: 479px) {
+  .team__title {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .team__title {
+    font-size: 36px;
+  }
 }
 
 .team__list {
@@ -1045,10 +1061,19 @@ button {
 }
 
 .clients__title {
-  font-size: 36px;
   line-height: 1.17;
   text-align: center;
   margin-bottom: 50px;
+}
+@media screen and (max-width: 479px) {
+  .clients__title {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .clients__title {
+    font-size: 36px;
+  }
 }
 
 .clients__list {
@@ -1067,7 +1092,12 @@ button {
   border: 1px solid var(--icon-color);
   transition: border-color var(--transition-durat-and-func);
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 479px) {
+  .clients__link {
+    width: 130px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .clients__link {
     width: 210px;
   }
@@ -1100,7 +1130,7 @@ button {
   background-color: var(--dark-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
-  min-width: 480px;
+  min-width: 320px;
 }
 @media screen and (max-width: 1199px) {
   .page-footer {

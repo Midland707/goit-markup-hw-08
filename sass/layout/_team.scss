@@ -1,11 +1,17 @@
 .team {
   background-color: var(--fourth-color);
-  min-width: 480px;
+  min-width: 320px;
 }
 
 .team__title {
-  font-size: 36px;
-  line-height: 1.16;
+  @media screen and (max-width: 479px) {
+    font-size: 30px;
+  }
+  @media screen and (min-width: 480px) {
+    font-size: 36px;
+  }
+
+  line-height: 1.17;
   text-align: center;
   margin-bottom: 50px;
 }
@@ -33,9 +39,8 @@
   }
 
   background-color: var(--third-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-  0px 1px 1px rgba(0, 0, 0, 0.14),
-  0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 

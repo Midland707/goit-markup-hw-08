@@ -1,5 +1,10 @@
 .clients__title {
-  font-size: 36px;
+  @media screen and (max-width: 479px) {
+    font-size: 30px;
+  }
+  @media screen and (min-width: 480px) {
+    font-size: 36px;
+  }
   line-height: 1.17;
   text-align: center;
   margin-bottom: 50px;
@@ -14,7 +19,10 @@
 
 .clients__link {
   @include flexbox(center);
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 479px) {
+    width: 130px;
+  }
+  @media screen and (min-width: 480px) and (max-width: 767px) {
     width: 210px;
   }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
